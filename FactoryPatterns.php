@@ -1,0 +1,5 @@
+<?php
+
+//patrones de diseño
+
+?>
