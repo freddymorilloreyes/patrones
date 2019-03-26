@@ -2,6 +2,8 @@
 //patrones de diseño
 
 /*
+ * creational patterns
+ * factory method
 Este patron define una interfaz para crear un objeto
  pero, deja que las subclases decidan que clase instanciar 
 
@@ -35,20 +37,20 @@ class SerVivo{
 class Humano extends SerVivo
 {
     public function __construct($extremidades){
-        $this->$extremidades=$extremidades;
+        $this->extremidades=$extremidades;
     }
 }
 
 class Canino extends SerVivo
 {
     public function __construct($extremidades){
-        $this->$extremidades=$extremidades;
+        $this->extremidades=$extremidades;
     }
 }
 
 $humano= SerVivo::crear('humano',4);
 echo $humano->getTipo()." este ser vivo tiene ".$humano->extremidades." extremidades<br>";
-var_dump($humano->extremidades);
+
 $can= SerVivo::crear('canino',5);
 echo $can->getTipo()." este ser vivo tiene ".$can->extremidades." extremidades<br>";
 
